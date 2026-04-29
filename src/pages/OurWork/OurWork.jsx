@@ -98,7 +98,9 @@ export default function OurWork() {
             </div>
           )}
           <p className="ow-tbucket__caption">
-            This gorgeous T-Bucket is "Enginuity" — built over the course of six years by Dustin Cooper. Custom Metal Finishing LLC Indiana has done every single piece of chrome (and gold) on this car over the build time, besides the heads, intake and valve covers. It wasn't cheap, but the quality and service is worth it.
+            This gorgeous T-Bucket is "Enginuity" — built over the course of six years by Dustin Cooper.
+
+              Dustin had this to say - "Custom Metal Finishing LLC Indiana has done every single piece of chrome (and gold) on this car over the build time, besides the heads, intake and valve covers. It wasn't cheap, but the quality and service is worth it."
           </p>
         </div>
       </section>
@@ -108,7 +110,7 @@ export default function OurWork() {
       {/* ── Section 3B: Notable Builds ────────────────── */}
       <section className="ow-notable">
         <p className="ow-section__eyebrow">Notable Builds</p>
-        <h2 className="ow-section__title">Cars We Have Worked On</h2>
+        <h2 className="ow-section__title">Cars We Adore</h2>
         <span className="ow-section__rule" />
         {notableBuilds.map((build) => (
           <div key={build.id} className={`ow-notable__row ow-notable__row--${build.photoSide}`}>
