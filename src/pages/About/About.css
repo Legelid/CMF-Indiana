@@ -1,0 +1,398 @@
+.about {
+  background: #FDEDC0;
+}
+
+/* ─── Hero ──────────────────────────────────────────────────── */
+.about-hero {
+  background: linear-gradient(to right, #1a1000, #2a2000);
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.about-hero__eyebrow {
+  display: block;
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 6px;
+  color: #C8A800;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.about-hero__title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  color: #FDEDC0;
+  line-height: 1;
+  margin: 0 0 10px;
+}
+
+.about-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  color: #C8A800;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* ─── Gold Divider ──────────────────────────────────────────── */
+.gold-divider {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #FDEDC0, #C8A800, #8a6800, #C8A800, #FDEDC0);
+}
+
+/* ─── Shared section headers ────────────────────────────────── */
+.about-section__eyebrow {
+  display: block;
+  text-align: center;
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: #8a7000;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.about-section__eyebrow--light {
+  color: #C8A800;
+}
+
+.about-section__title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  color: #1a1000;
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+
+.about-section__title--light {
+  color: #FDEDC0;
+}
+
+.about-section__rule {
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #C8A800;
+  margin: 0 auto 56px;
+}
+
+/* ─── Jim's Legacy ──────────────────────────────────────────── */
+.about-legacy {
+  background: #1a1000;
+  padding: 80px;
+}
+
+.about-legacy__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 72px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-legacy__photo-col,
+.about-legacy__story-col {
+  min-width: 0;
+}
+
+.about-legacy__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.about-legacy__placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #2a2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C8A800;
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.about-legacy__caption {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #8a7000;
+  font-style: italic;
+  margin: 12px 0 0;
+  text-align: center;
+}
+
+.about-legacy__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: #C8A800;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.about-legacy__eyebrow-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(200, 168, 0, 0.3);
+}
+
+.about-legacy__title {
+  font-family: var(--font-display);
+  font-size: 42px;
+  color: #FDEDC0;
+  line-height: 1.05;
+  margin: 0 0 24px;
+}
+
+.about-legacy__body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 300;
+  color: #C8A800;
+  line-height: 1.9;
+  margin: 0 0 18px;
+}
+
+.about-legacy__body:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Meet the Team ─────────────────────────────────────────── */
+.about-team {
+  background: #FDEDC0;
+  padding: 80px;
+}
+
+.about-roster {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-roster__row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  align-items: center;
+  min-height: 100px;
+  padding: 36px 0;
+  border-bottom: 1px solid #E0DAD0;
+  transition: background 0.2s;
+}
+
+.about-roster__row:last-child {
+  border-bottom: none;
+}
+
+.about-roster__row:hover {
+  background: rgba(200, 168, 0, 0.05);
+}
+
+.about-roster__name-col {
+  text-align: center;
+  padding-right: 40px;
+  border-right: 3px solid #C8A800;
+}
+
+.about-roster__name {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: #1a1000;
+  line-height: 1;
+  margin: 0;
+}
+
+.about-roster__detail-col {
+  padding-left: 40px;
+}
+
+.about-roster__role {
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #C8A800;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.about-roster__bio {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: #5a4800;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ─── Shop Photos ───────────────────────────────────────────── */
+.about-shop {
+  background: #1a1000;
+  padding: 72px 80px;
+}
+
+.about-shop .about-section__title {
+  font-size: 56px;
+}
+
+.about-shop .about-section__rule {
+  margin-bottom: 48px;
+}
+
+.about-shop__row {
+  display: flex;
+  gap: 3px;
+  background: #C8A800;
+}
+
+.about-shop__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-shop__placeholder {
+  flex: 1;
+  height: 320px;
+  background: #2a2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C8A800;
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* ─── Team Photo ────────────────────────────────────────────── */
+.about-team-photo {
+  background: #FDEDC0;
+  padding: 72px 80px;
+}
+
+.about-team-photo__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-team-photo__img {
+  width: 100%;
+  height: auto;
+  border: 4px solid #C8A800;
+  display: block;
+}
+
+.about-team-photo__placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #2a2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C8A800;
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 4px solid #C8A800;
+  box-sizing: border-box;
+}
+
+.about-team-photo__caption {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: #5a4800;
+  font-style: italic;
+  margin: 16px 0 0;
+  line-height: 1.7;
+}
+
+/* ─── Mobile ────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 28px 24px;
+  }
+
+  .about-hero__title {
+    font-size: 52px;
+  }
+
+  .about-legacy {
+    padding: 48px 24px;
+  }
+
+  .about-legacy__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-legacy__title {
+    font-size: 32px;
+  }
+
+  .about-team {
+    padding: 48px 24px;
+  }
+
+  .about-section__title {
+    font-size: 42px;
+  }
+
+  .about-shop .about-section__title {
+    font-size: 38px;
+  }
+
+  .about-roster__row {
+    grid-template-columns: 1fr;
+    padding: 28px 0;
+  }
+
+  .about-roster__name-col {
+    text-align: left;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 2px solid #C8A800;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+
+  .about-roster__name {
+    font-size: 36px;
+  }
+
+  .about-roster__detail-col {
+    padding-left: 0;
+  }
+
+  .about-shop {
+    padding: 48px 24px;
+  }
+
+  .about-shop__row {
+    flex-direction: column;
+  }
+
+  .about-team-photo {
+    padding: 40px 24px;
+  }
+}

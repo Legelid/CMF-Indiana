@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap');
+@import './variables.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 160px;
+  background: linear-gradient(160deg, #FFF5C8 0%, #FDEDC0 40%, #F5E098 100%);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-body-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,21 @@
+.page-hero {
+  padding: 60px 36px;
+  background: var(--color-black);
+  text-align: center;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--color-yellow);
+  letter-spacing: 4px;
+  margin: 0 0 12px;
+}
+
+.page-hero__subtitle {
+  font-family: var(--font-condensed);
+  font-size: 16px;
+  color: var(--color-muted);
+  letter-spacing: 2px;
+  margin: 0;
+}

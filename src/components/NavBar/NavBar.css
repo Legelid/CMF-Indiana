@@ -1,0 +1,208 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* ─── Top bar: logo + name ─────────────────────────────────────── */
+.navbar__topbar {
+  background: #FDEDC0;
+  padding: 24px 48px;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-decoration: none;
+}
+
+.navbar__logo-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navbar__logo-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow:
+    0 0 8px 4px rgba(255, 220, 0, 0.6),
+    0 0 20px 8px rgba(255, 220, 0, 0.3),
+    0 0 40px 12px rgba(255, 220, 0, 0.12);
+}
+
+.navbar__logo {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.navbar__brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__site-name {
+  font-family: var(--font-display);
+  font-size: 42px;
+  color: var(--color-black);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.navbar__site-tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--color-black);
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+/* ─── Nav bar: links ───────────────────────────────────────────── */
+.navbar__navbar {
+  background: linear-gradient(to bottom, #C8A800, #A88000);
+  border-top: 2px solid #8a6800;
+  border-bottom: 2px solid #8a6800;
+  padding: 0 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar__link {
+  font-family: var(--font-body);
+  font-size: 19px;
+  color: #1a1000;
+  text-decoration: none;
+  padding: 0 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar__link--sep {
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.navbar__link:hover {
+  color: #000;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.navbar__link--active {
+  color: #000;
+  font-weight: 700;
+}
+
+/* ─── Hamburger (mobile only) ──────────────────────────────────── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 0;
+  margin-left: auto;
+}
+
+.navbar__hamburger div {
+  width: 26px;
+  height: 2px;
+  background: #1a1000;
+  margin: 5px 0;
+}
+
+/* ─── Mobile overlay ───────────────────────────────────────────── */
+.navbar__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.97);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__overlay-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar__overlay-link {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.navbar__overlay-link:hover,
+.navbar__overlay-link--active {
+  color: var(--color-yellow);
+}
+
+/* ─── Mobile breakpoint ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .navbar__topbar {
+    padding: 16px 24px;
+  }
+
+  .navbar__brand {
+    gap: 16px;
+  }
+
+  .navbar__logo {
+    width: 120px;
+  }
+
+  .navbar__site-name {
+    font-size: 24px;
+  }
+
+  .navbar__site-tagline {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__navbar {
+    justify-content: flex-end;
+    padding: 0 24px;
+  }
+}

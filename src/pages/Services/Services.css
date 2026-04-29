@@ -1,0 +1,445 @@
+.services {
+  background: #FDEDC0;
+}
+
+/* ─── Shared section header elements ───────────────────────────── */
+.svc-section__eyebrow {
+  display: block;
+  text-align: center;
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: #8a7000;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.svc-section__eyebrow--light {
+  color: #C8A800;
+}
+
+.svc-section__title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  color: #1a1000;
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+
+.svc-section__title--light {
+  color: #FDEDC0;
+}
+
+.svc-section__rule {
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #C8A800;
+  margin: 0 auto 56px;
+}
+
+/* ─── Section 1: Hero ───────────────────────────────────────────── */
+.svc-hero {
+  background: linear-gradient(to right, #1a1000, #2a2000);
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.svc-hero__eyebrow {
+  display: block;
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 6px;
+  color: #C8A800;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.svc-hero__title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  line-height: 1;
+  color: #FDEDC0;
+  margin: 0 0 10px;
+}
+
+.svc-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  color: #C8A800;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* ─── Section 2B: Feature Intro ─────────────────────────────────── */
+.svc-intro {
+  background: #FDEDC0;
+  padding: 80px;
+}
+
+.svc-intro__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.svc-intro__photo {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+  border: 3px solid #C8A800;
+  box-shadow: 4px 4px 0px #C8A800;
+}
+
+.svc-intro__title {
+  font-family: var(--font-display);
+  font-size: 38px;
+  color: #1a1000;
+  line-height: 1.1;
+  margin: 0 0 28px;
+}
+
+.svc-intro__body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 300;
+  color: #3a3000;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.svc-intro__rule {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #C8A800;
+  margin: 24px 0;
+}
+
+.svc-intro__note {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: #5a4800;
+  font-style: italic;
+  margin: 0 0 20px;
+}
+
+.svc-intro__btn {
+  display: inline-block;
+  background: #C8A800;
+  color: #1a1000;
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 13px 28px;
+  text-decoration: none;
+  border-radius: 0;
+  transition: background 0.2s;
+  text-transform: uppercase;
+}
+
+.svc-intro__btn:hover {
+  background: #A88000;
+}
+
+/* ─── Section 2: Gold divider ───────────────────────────────────── */
+.gold-divider {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #FDEDC0, #C8A800, #8a6800, #C8A800, #FDEDC0);
+}
+
+/* ─── Section 3: Plating Services ──────────────────────────────── */
+.svc-plating {
+  background: #FDEDC0;
+  padding: 80px 80px;
+}
+
+.svc-plating__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background: #C8A800;
+}
+
+.svc-card {
+  background: #FDEDC0;
+  padding: 40px 36px;
+  border-top: 3px solid transparent;
+  transition: border-top-color 0.2s, background 0.2s;
+  text-align: center;
+}
+
+.svc-card:hover {
+  border-top-color: #C8A800;
+  background: #FFF8DC;
+}
+
+.svc-card__title {
+  font-family: var(--font-condensed);
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #1a1000;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.svc-card__desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: #5a4800;
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ─── Section 4: Stripping Methods ─────────────────────────────── */
+.svc-strip {
+  background: #1a1000;
+  padding: 72px 80px;
+}
+
+.svc-strip__subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: #C8A800;
+  text-align: center;
+  margin: 0 0 56px;
+  line-height: 1.6;
+}
+
+/* Override rule margin for this section — subtitle sits between rule and grid */
+.svc-strip .svc-section__rule {
+  margin-bottom: 16px;
+}
+
+.svc-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background: #C8A800;
+}
+
+.svc-strip__card {
+  background: #2a2000;
+  padding: 40px 36px;
+  border-top: 3px solid #C8A800;
+  text-align: center;
+}
+
+.svc-strip__card-title {
+  font-family: var(--font-condensed);
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #FDEDC0;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.svc-strip__card-desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: #8a7000;
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ─── Section 5: Powder Coating CTA ────────────────────────────── */
+.svc-powder {
+  background: #C8A800;
+  padding: 48px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.svc-powder__title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  color: #1a1000;
+  line-height: 1;
+  margin: 0;
+}
+
+.svc-powder__subtitle {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 300;
+  color: #3a2000;
+  margin: 8px 0 0;
+}
+
+.svc-powder__btn {
+  display: inline-block;
+  background: #1a1000;
+  color: #C8A800;
+  font-family: var(--font-condensed);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 15px 36px;
+  border-radius: 0;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background 0.25s;
+  cursor: pointer;
+}
+.svc-powder__btn:hover { background: #000; }
+
+/* ─── Section 6: Quote CTA ──────────────────────────────────────── */
+.svc-quote {
+  background: #FDEDC0;
+  padding: 80px 80px;
+}
+
+.svc-quote__inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.svc-quote__title {
+  font-family: var(--font-display);
+  font-size: 56px;
+  color: #1a1000;
+  line-height: 1;
+  margin: 0 0 16px;
+}
+
+.svc-quote__body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 300;
+  color: #5a4800;
+  line-height: 2;
+  margin: 0 0 36px;
+}
+
+.svc-quote__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.svc-quote__btn-primary {
+  display: inline-block;
+  background: #C8A800;
+  color: #1a1000;
+  font-family: var(--font-condensed);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 15px 36px;
+  border-radius: 0;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.25s;
+  cursor: pointer;
+}
+.svc-quote__btn-primary:hover { background: #A88000; }
+
+.svc-quote__btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #1a1000;
+  font-family: var(--font-condensed);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 15px 36px;
+  border-radius: 0;
+  border: 2px solid #1a1000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.25s, color 0.25s;
+  cursor: pointer;
+}
+.svc-quote__btn-outline:hover {
+  background: #1a1000;
+  color: #FDEDC0;
+}
+
+/* ─── Mobile ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .svc-hero {
+    padding: 28px 24px;
+  }
+
+  .svc-hero__title {
+    font-size: 52px;
+  }
+
+  .svc-intro {
+    padding: 48px 24px;
+  }
+
+  .svc-intro__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .svc-intro__title {
+    font-size: 28px;
+  }
+
+  .svc-plating {
+    padding: 40px 24px;
+  }
+
+  .svc-plating__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-strip {
+    padding: 40px 24px;
+  }
+
+  .svc-strip__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-powder {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  .svc-powder__btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .svc-quote {
+    padding: 48px 24px;
+  }
+
+  .svc-quote__buttons {
+    flex-direction: column;
+  }
+
+  .svc-quote__btn-primary,
+  .svc-quote__btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+}
