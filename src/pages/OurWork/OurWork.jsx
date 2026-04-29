@@ -110,7 +110,7 @@ export default function OurWork() {
       {/* ── Section 3B: Notable Builds ────────────────── */}
       <section className="ow-notable">
         <p className="ow-section__eyebrow">Notable Builds</p>
-        <h2 className="ow-section__title">Cars We Adore</h2>
+        <h2 className="ow-section__title">Cars We Worked On</h2>
         <span className="ow-section__rule" />
         {notableBuilds.map((build) => (
           <div key={build.id} className={`ow-notable__row ow-notable__row--${build.photoSide}`}>
