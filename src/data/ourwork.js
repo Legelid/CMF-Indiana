@@ -9,7 +9,7 @@ export const notableBuilds = [
     id: 'corvair-1954',
     title: '1954 Motorama Corvair',
     subtitle: 'Show Car Restoration',
-    description: 'To the left is a beautiful 1954 Motorama Corvair — the Corvette concept car that never was. Built by the exceptional Brett Henderson of Blue Flame Restoration, it is the most accurate recreation of the original concept Corvette.',
+    description: 'Right here is a beautiful 1954 Motorama Corvair — the Corvette concept car that never was. Built by the exceptional Brett Henderson of Blue Flame Restoration, it is the most accurate recreation of the original concept Corvette.',
     photo: '/images/our-work/1954 Motorama Corvair Corvette.png',
     photoAlt: '1954 Motorama Corvair concept car',
     photoSide: 'left',

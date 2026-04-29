@@ -46,7 +46,7 @@ export default function About() {
       <section className="about-hero">
         <p className="about-hero__eyebrow">Our Story</p>
         <h1 className="about-hero__title">About Us</h1>
-        <p className="about-hero__subtitle">Family owned and operated since 1994</p>
+        <p className="about-hero__subtitle">Family owned and operated since 2004</p>
       </section>
 
       {/* ── Section 2: Gold Divider ───────────────── */}

@@ -115,8 +115,8 @@ export default function Contact() {
             </div>
 
             <div className="contact-info-block">
-              <p className="contact-info-block__label">Call or Text Us</p>
-              <a href="tel:7654789990" className="contact-info-block__phone">(765) 478-9990</a>
+              <p className="contact-info-block__label">How To Get Ahold Of Us?</p>
+              <a href="tel:7654789990" className="contact-info-block__phone">Call Only: (765) 478-9990</a>
               <a href="sms:7655241027" className="contact-info-block__sms">Text Only: (765) 524-1027</a>
             </div>
 
