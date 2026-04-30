@@ -2,6 +2,12 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { tBucketPhotos, notableBuilds, beforeAfterPairs, galleryPhotos } from '../../data/ourwork';
 import './OurWork.css';
 
+const devillePhotos = [
+  '/images/our-work/deville/488544688_1171975634721366_1956677559633708844_n.jpg',
+  '/images/our-work/deville/488894605_1171973471388249_4007462879788411672_n.jpg',
+  '/images/our-work/deville/489400178_1171973668054896_4959126679969028646_n.jpg',
+];
+
 export default function OurWork() {
   const [lb, setLb] = useState(null);
   const touchStartX = useRef(null);
@@ -17,6 +23,9 @@ export default function OurWork() {
       if (prev.mode === 'tbucket') {
         return { ...prev, photoIdx: (prev.photoIdx - 1 + tBucketPhotos.length) % tBucketPhotos.length };
       }
+      if (prev.mode === 'deville') {
+        return { ...prev, photoIdx: (prev.photoIdx - 1 + devillePhotos.length) % devillePhotos.length };
+      }
       return prev;
     });
   }, []);
@@ -29,6 +38,9 @@ export default function OurWork() {
       }
       if (prev.mode === 'tbucket') {
         return { ...prev, photoIdx: (prev.photoIdx + 1) % tBucketPhotos.length };
+      }
+      if (prev.mode === 'deville') {
+        return { ...prev, photoIdx: (prev.photoIdx + 1) % devillePhotos.length };
       }
       return prev;
     });
@@ -129,6 +141,44 @@ export default function OurWork() {
             </div>
           </div>
         ))}
+
+        {/* ── 1957 Cadillac DeVille Row ─────────────────── */}
+        <div className="ow-notable__row">
+          <div
+            className="ow-notable__photo-col ow-notable__photo-col--deville"
+            onClick={() => setLb({ mode: 'deville', photoIdx: 0 })}
+          >
+            <img
+              src={devillePhotos[0]}
+              alt="1957 Cadillac DeVille Convertible"
+              className="ow-notable__img ow-notable__img--deville"
+            />
+            <div className="ow-deville__click-note">Click photo to view all images</div>
+          </div>
+          <div className="ow-notable__text-col">
+            <span className="ow-notable__subtitle">1957 Cadillac DeVille Convertible</span>
+            <h3 className="ow-notable__title">57 Cadillac DeVille</h3>
+            <p className="ow-notable__desc">
+              This absolute beauty of a 1957 Cadillac DeVille convertible was recently completed by Darren Nickleson and his team at Indy Street Rods &amp; Classics. We are beyond proud to have our name on the bright-work!
+            </p>
+            <a
+              href="https://www.indystreetrodsandclassics.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ow-notable__link"
+            >
+              Visit Indy Street Rods &amp; Classics →
+            </a>
+            <a
+              href="https://www.facebook.com/darren.nickleson"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ow-notable__link"
+            >
+              Darren Nickleson on Facebook →
+            </a>
+          </div>
+        </div>
       </section>
 
       <div className="gold-divider" />
@@ -166,17 +216,18 @@ export default function OurWork() {
       {/* ── Section 5: Gallery ────────────────────────── */}
       <section className="ow-gallery">
         <p className="ow-section__eyebrow">Gallery</p>
-        <h2 className="ow-section__title">More of Our Work</h2>
+        <h2 className="ow-section__title">Our Work</h2>
         <span className="ow-section__rule" />
         <div className="ow-gallery__grid">
           {galleryPhotos.map((photo, photoIdx) => (
             <div
-              key={photoIdx}
-              className="ow-gallery__item"
+              key={photo.id}
+              className="ow-gallery__card"
               onClick={() => setLb({ mode: 'gallery', photoIdx })}
             >
-              <img src={photo.src} alt={photo.alt} className="ow-gallery__img" />
-              <div className="ow-gallery__overlay" />
+              <img src={photo.src} alt={photo.label} className="ow-gallery__img" />
+              <p className="ow-gallery__label">{photo.label}</p>
+              <div className="ow-gallery__divider" />
             </div>
           ))}
         </div>
@@ -190,16 +241,36 @@ export default function OurWork() {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
+          {lb.mode === 'gallery' ? (
+            <div className="ow-lb__gallery-card" onClick={e => e.stopPropagation()}>
+              <button className="ow-lb__gallery-close" onClick={closeLb} aria-label="Close">
+                &times;
+              </button>
+              <img
+                src={galleryPhotos[lb.photoIdx].src}
+                alt={galleryPhotos[lb.photoIdx].label}
+                className="ow-lb__gallery-img"
+              />
+              <h3 className="ow-lb__gallery-label">{galleryPhotos[lb.photoIdx].label}</h3>
+              <p className="ow-lb__gallery-desc">{galleryPhotos[lb.photoIdx].description}</p>
+              <button className="ow-lb__gallery-prev" onClick={e => { e.stopPropagation(); lbPrev(); }} aria-label="Previous">
+                &#8592;
+              </button>
+              <button className="ow-lb__gallery-next" onClick={e => { e.stopPropagation(); lbNext(); }} aria-label="Next">
+                &#8594;
+              </button>
+            </div>
+          ) : (
           <div className="ow-lb__box" onClick={e => e.stopPropagation()}>
             <button className="ow-lb__close" onClick={closeLb} aria-label="Close">
               &times;
             </button>
 
-            {lb.mode === 'gallery' && (
+            {lb.mode === 'tbucket' && (
               <>
                 <img
-                  src={galleryPhotos[lb.photoIdx].src}
-                  alt={galleryPhotos[lb.photoIdx].alt}
+                  src={tBucketPhotos[lb.photoIdx]}
+                  alt="Award-Winning T-Bucket"
                   className="ow-lb__img"
                 />
                 <button className="ow-lb__prev" onClick={e => { e.stopPropagation(); lbPrev(); }}>
@@ -211,11 +282,11 @@ export default function OurWork() {
               </>
             )}
 
-            {lb.mode === 'tbucket' && (
+            {lb.mode === 'deville' && (
               <>
                 <img
-                  src={tBucketPhotos[lb.photoIdx]}
-                  alt="Award-Winning T-Bucket"
+                  src={devillePhotos[lb.photoIdx]}
+                  alt="1957 Cadillac DeVille Convertible"
                   className="ow-lb__img"
                 />
                 <button className="ow-lb__prev" onClick={e => { e.stopPropagation(); lbPrev(); }}>
@@ -248,6 +319,7 @@ export default function OurWork() {
               </div>
             )}
           </div>
+          )}
         </div>
       )}
 

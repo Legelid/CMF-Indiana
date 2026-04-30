@@ -182,13 +182,14 @@
 .ow-notable__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3px;
-  background: #C8A800;
-  margin-bottom: 3px;
+  gap: 0;
+  background: #FFF8DC;
+  border-bottom: 3px solid #C8A800;
+  min-height: 500px;
 }
 
 .ow-notable__row:last-child {
-  margin-bottom: 0;
+  border-bottom: none;
 }
 
 .ow-notable__row--right {
@@ -205,15 +206,14 @@
 
 .ow-notable__img {
   width: 100%;
-  height: 100%;
-  min-height: 360px;
+  height: 500px;
   object-fit: cover;
   display: block;
 }
 
 .ow-notable__text-col {
-  background: #FDEDC0;
-  padding: 56px 48px;
+  background: #FFF8DC;
+  padding: 64px 52px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,7 +221,7 @@
 
 .ow-notable__subtitle {
   font-family: var(--font-condensed);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 4px;
   color: #C8A800;
   font-weight: 600;
@@ -244,25 +244,54 @@
   font-weight: 300;
   color: #5a4800;
   line-height: 1.9;
-  margin: 0 0 20px;
+  margin: 0 0 28px;
 }
 
 .ow-notable__link {
   font-family: var(--font-condensed);
   font-size: 13px;
   letter-spacing: 2px;
-  font-weight: 600;
-  color: #8a7000;
+  font-weight: 700;
+  color: #1a1000;
   text-decoration: none;
-  text-transform: uppercase;
-  border-bottom: 1px solid #C8A800;
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
+  border-bottom: 2px solid #C8A800;
+  padding-bottom: 3px;
+  display: inline-block;
+  margin-bottom: 14px;
+  align-self: flex-start;
+  transition: color 0.2s;
 }
 
 .ow-notable__link:hover {
   color: #C8A800;
-  border-color: #C8A800;
+}
+
+/* ─── DeVille Row (clickable photo) ─────────────────────────── */
+.ow-notable__photo-col--deville {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.ow-notable__photo-col--deville:hover .ow-notable__img {
+  opacity: 0.92;
+}
+
+.ow-notable__img--deville {
+  transition: opacity 0.2s;
+}
+
+.ow-deville__click-note {
+  font-family: var(--font-condensed);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #8a7000;
+  text-align: center;
+  padding: 6px 0;
+  background: #FFF8DC;
+  display: block;
+  margin-top: 0;
 }
 
 /* ─── Before & After ────────────────────────────────────────── */
@@ -352,20 +381,27 @@
 /* ─── Gallery ───────────────────────────────────────────────── */
 .ow-gallery {
   background: #FDEDC0;
-  padding: 80px;
+  padding: 80px 60px;
 }
 
 .ow-gallery__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-  background: #C8A800;
+  gap: 32px;
 }
 
-.ow-gallery__item {
-  position: relative;
+.ow-gallery__card {
+  background: #FDEDC0;
+  border: 3px solid #C8A800;
+  box-shadow: 4px 4px 0px #C8A800;
+  padding: 12px;
   cursor: pointer;
-  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ow-gallery__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0px #A88000;
 }
 
 .ow-gallery__img {
@@ -373,24 +409,94 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-  transition: filter 0.2s;
+  margin-bottom: 12px;
 }
 
-.ow-gallery__item:hover .ow-gallery__img {
-  filter: brightness(1.05);
+.ow-gallery__label {
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #1a1000;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 4px;
 }
 
-.ow-gallery__overlay {
+.ow-gallery__divider {
+  width: 32px;
+  height: 2px;
+  background: #C8A800;
+  margin: 0 auto;
+}
+
+/* ─── Gallery Lightbox ──────────────────────────────────────── */
+.ow-lb__gallery-card {
+  background: #FDEDC0;
+  max-width: 800px;
+  width: 90%;
+  padding: 32px;
+  position: relative;
+  border: 3px solid #C8A800;
+}
+
+.ow-lb__gallery-close {
   position: absolute;
-  inset: 0;
-  background: rgba(200, 168, 0, 0);
-  transition: background 0.2s;
-  pointer-events: none;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  color: #1a1000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
 }
 
-.ow-gallery__item:hover .ow-gallery__overlay {
-  background: rgba(200, 168, 0, 0.08);
+.ow-lb__gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border: 2px solid #C8A800;
 }
+
+.ow-lb__gallery-label {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: #1a1000;
+  margin: 0 0 8px;
+}
+
+.ow-lb__gallery-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  color: #5a4800;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.ow-lb__gallery-prev,
+.ow-lb__gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #C8A800;
+  color: #1a1000;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+
+.ow-lb__gallery-prev { left: -20px; }
+.ow-lb__gallery-next { right: -20px; }
 
 /* ─── Lightbox ──────────────────────────────────────────────── */
 .ow-lb {
@@ -495,6 +601,13 @@
 .ow-lb__pair-label--before { left: 0; }
 .ow-lb__pair-label--after { right: 0; }
 
+/* ─── Tablet ────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .ow-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ─── Mobile ────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .ow-hero {
@@ -545,25 +658,27 @@
   }
 
   .ow-notable {
-    padding: 48px 24px;
+    padding: 48px 0;
   }
 
   .ow-notable__row,
   .ow-notable__row--right {
     grid-template-columns: 1fr;
     direction: ltr;
+    min-height: auto;
   }
 
   .ow-notable__img {
-    min-height: 240px;
+    height: 300px;
+    object-fit: cover;
   }
 
   .ow-notable__text-col {
-    padding: 32px 24px;
+    padding: 36px 24px;
   }
 
   .ow-notable__title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .ow-pairs {
@@ -590,8 +705,17 @@
   }
 
   .ow-gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
+
+  .ow-lb__gallery-card {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .ow-lb__gallery-prev { left: -12px; }
+  .ow-lb__gallery-next { right: -12px; }
 
   .ow-lb__pair {
     flex-direction: column;

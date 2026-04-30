@@ -5,8 +5,8 @@ import './Events.css';
 const SHOW_PHOTOS = [
   { src: '/images/events/hot-rod-coupe.jpg', alt: 'Traditional hot rod at a car show' },
   { src: '/images/events/black-cadillac.jpg', alt: 'Black Cadillac with chrome trim at a car show' },
-  { src: null, label: 'Blue Custom — Photo Coming Soon' },
-  { src: null, label: 'Purple Vintage Motorcycle — Photo Coming Soon' },
+  { src: '/images/events/tin-restoration-engine.jpg.png', alt: 'Classic engine bay with chrome valve covers and trim' },
+  { src: '/images/events/greg-goergens-rupp-mini-bike.jpg.png', alt: "Greg Goergens' purple Rupp mini-bike with chrome detailing" },
 ];
 
 export default function Events() {

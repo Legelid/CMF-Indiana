@@ -209,7 +209,7 @@ export default function Pricing() {
             </div>
           </div>
           <div className="pricing-bumper__photo">
-            <span>Corvette Photo — Supplied by Jacob</span>
+            <img src="/images/our-work/VETTE.jpeg" alt="Early Corvette with chrome bright-work" className="pricing-bumper__photo-img" />
           </div>
         </div>
       </section>
