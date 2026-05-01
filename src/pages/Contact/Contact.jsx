@@ -1,27 +1,6 @@
-import { useState } from 'react'
 import './Contact.css'
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
-
-  async function handleSubmit(e) {
-    e.preventDefault()
-    setSubmitting(true)
-    const data = Object.fromEntries(new FormData(e.target))
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
-      const json = await res.json()
-      if (json.success) setSubmitted(true)
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
   return (
     <main className="contact">
 
@@ -39,66 +18,14 @@ export default function Contact() {
       <section className="contact-main">
         <div className="contact-main__inner">
 
-          {/* Left — Form */}
+          {/* TEMPORARY — Contact form removed pending Web3Forms setup. Restore form here when access key is ready. */}
           <div className="contact-form-col">
-            <p className="contact-col__label">Send Us a Message</p>
-            <span className="contact-col__rule" />
-
-            {submitted ? (
-              <div className="contact-success">Thanks! We will be in touch soon.</div>
-            ) : (
-              <form className="contact-form" onSubmit={handleSubmit}>
-                {/* Replace with actual Web3Forms access key from web3forms.com */}
-                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
-
-                <div className="contact-field">
-                  <label className="contact-field__label" htmlFor="name">Your Name</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    className="contact-field__input"
-                    required
-                  />
-                </div>
-
-                <div className="contact-field">
-                  <label className="contact-field__label" htmlFor="email">Email Address</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    className="contact-field__input"
-                    required
-                  />
-                </div>
-
-                <div className="contact-field">
-                  <label className="contact-field__label" htmlFor="phone">Phone Number</label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    className="contact-field__input"
-                  />
-                  <span className="contact-field__note">Optional</span>
-                </div>
-
-                <div className="contact-field">
-                  <label className="contact-field__label" htmlFor="message">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    className="contact-field__input contact-field__textarea"
-                    required
-                  />
-                </div>
-
-                <button type="submit" className="contact-form__btn" disabled={submitting}>
-                  {submitting ? 'Sending…' : 'Send Message →'}
-                </button>
-              </form>
-            )}
+            <img
+              src="/images/about/team-2016.jpg"
+              alt="The CMF Indiana Team"
+              className="contact-team-photo"
+            />
+            <p className="contact-team-caption">The CMF Indiana Team</p>
           </div>
 
           {/* Right — Info */}
