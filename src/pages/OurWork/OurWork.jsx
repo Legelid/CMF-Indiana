@@ -169,14 +169,6 @@ export default function OurWork() {
             >
               Visit Indy Street Rods &amp; Classics →
             </a>
-            <a
-              href="https://www.facebook.com/darren.nickleson"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ow-notable__link"
-            >
-              Darren Nickleson on Facebook →
-            </a>
           </div>
         </div>
       </section>

@@ -60,6 +60,12 @@ export const beforeAfterPairs = [
     before: '/images/before-after/head-before.png',
     after: '/images/before-after/head-after.png',
   },
+  {
+    id: 'cadillac-headlights',
+    label: '1950 Cadillac Headlight Bezels',
+    before: '/images/before-after/1950-cadillac-headlights-before.jpg',
+    after: '/images/before-after/1950-cadillac-headlights-after.jpg',
+  },
 ];
 
 export const galleryPhotos = [
@@ -77,56 +83,62 @@ export const galleryPhotos = [
   },
   {
     id: 3,
-    src: '/images/our-work/Grilll.jpg',
-    label: 'Vintage Wire Grille',
-    description: 'A large vintage car grille shell, fully stripped and chrome plated to a mirror finish. The intricate wire mesh required careful masking and multiple plating passes.',
-  },
-  {
-    id: 4,
     src: '/images/our-work/Mack_hood_ornament.jpg',
     label: 'Mack Bulldog Mascot',
     description: 'The iconic Mack Trucks bulldog mascot restored and chrome plated. Every curve was hand-polished and triple-plated to bring it back to showroom condition.',
   },
   {
+    id: 4,
+    src: '/images/our-work/Rockne_ornament.jpg',
+    label: 'Rockne Hood Ornament',
+    description: '1932 Rockne hood ornament, fully restored and chrome plated to show quality.',
+  },
+  {
     id: 5,
-    src: '/images/our-work/testimonials~~element61.jpg',
-    label: 'Restored Wire Grille',
-    description: 'A vintage chrome wire grille, fully stripped and restored. The uniform, tight chrome finish across dozens of individual wires reflects the precision of our plating process.',
+    src: '/images/our-work/48_Pontiac.jpg',
+    label: '1948 Pontiac Hood Ornament',
+    description: 'A 1948 Pontiac hood ornament, fully restored and triple chrome plated to show quality finish.',
   },
   {
     id: 6,
-    src: '/images/our-work/Rockne_ornament.jpg',
-    label: 'Rockne Hood Ornament',
-    description: 'A rare Rockne winged-wheel hood ornament, fully restored and chrome plated. Pieces like this require careful hand-polishing before plating to preserve every period-correct detail.',
-  },
-  {
-    id: 7,
     src: '/images/our-work/Copper_lamps.jpg',
     label: 'Copper Lamp Finials',
     description: 'A pair of ornate lamp finials sent in for copper plating. The warm, mirror-bright finish was achieved through multiple rounds of buffing and electroplating.',
   },
   {
+    id: 7,
+    src: '/images/our-work/Grylll4.jpg',
+    label: '1937 Ford Coupe Grill',
+    description: 'A 1937 Ford Coupe grill shell, fully stripped and chrome plated to a mirror finish.',
+  },
+  {
     id: 8,
+    src: '/images/our-work/testimonials~~element61.jpg',
+    label: '1935 Ford Deluxe 48 Grill',
+    description: 'Before restoration — a 1935 Ford Deluxe 48 grill shell awaiting stripping and plating.',
+  },
+  {
+    id: 9,
+    src: '/images/our-work/Grilll.jpg',
+    label: '1935 Ford Deluxe 48 Grill',
+    description: 'After restoration — fully stripped, polished, and chrome plated to a mirror finish.',
+  },
+  {
+    id: 10,
     src: '/images/our-work/61-62_Corvette_Rear_Bumpers.jpg',
     label: "'61–'62 Corvette Bumpers",
     description: 'Rear bumper guards for a 1961–62 Corvette, finished to a flawless show-quality chrome. These pieces were stripped to bare metal, buffed smooth, and triple-plated.',
   },
   {
-    id: 9,
-    src: '/images/our-work/Grylll4.jpg',
-    label: 'Chrome Grille Shell',
-    description: 'A bold vintage ribbed grille shell, polished and chrome plated to a show standard. The tight repeating fins make an even, deep-mirror finish a real test of craftsmanship.',
-  },
-  {
-    id: 10,
+    id: 11,
     src: '/images/our-work/Kim_Forster_1934_Desoto_Airflow1.jpg',
     label: '1934 DeSoto Airflow',
     description: 'Kim Forster\'s concours-restored 1934 DeSoto Airflow, wearing chrome and bright-work plated by CMF Indiana. Shown here at a national concours event.',
   },
   {
-    id: 11,
+    id: 12,
     src: '/images/our-work/20260423_095911.jpg.png',
-    label: 'Headlight Bezel',
-    description: 'A headlight bezel brought back from heavy corrosion to a flawless chrome finish. The deep mirror surface reflects the quality that goes into every restoration.',
+    label: 'Vintage Toy Car Radiator Shroud',
+    description: 'A vintage toy car radiator shroud, stripped, polished, and chrome plated to show quality.',
   },
 ];
