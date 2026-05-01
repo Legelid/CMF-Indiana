@@ -32,13 +32,13 @@ export const notableBuilds = [
 export const beforeAfterPairs = [
   {
     id: 'pontiac-ornament',
-    label: '1955 Pontiac Chieftain Hood Ornament',
+    label: '1948 Pontiac Chieftain Hood Ornament',
     before: '/images/our-work/Before2.jpg',
     after: '/images/our-work/After2.jpg',
   },
   {
     id: 'airplane-ornament',
-    label: 'Vintage Hood Ornament Restoration',
+    label: '1955 Pontiac Chieftain Hood Ornament',
     before: '/images/our-work/Before1.jpg',
     after: '/images/our-work/After1.jpg',
   },
@@ -90,13 +90,13 @@ export const galleryPhotos = [
   {
     id: 4,
     src: '/images/our-work/Rockne_ornament.jpg',
-    label: 'Rockne Hood Ornament',
+    label: '1932 Rockne Hood Ornament',
     description: '1932 Rockne hood ornament, fully restored and chrome plated to show quality.',
   },
   {
     id: 5,
     src: '/images/our-work/48_Pontiac.jpg',
-    label: '1948 Pontiac Hood Ornament',
+    label: '1948 Pontiac Chieftain Hood Ornament',
     description: 'A 1948 Pontiac hood ornament, fully restored and triple chrome plated to show quality finish.',
   },
   {
