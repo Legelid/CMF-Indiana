@@ -56,7 +56,7 @@ export const beforeAfterPairs = [
   },
   {
     id: 'engine-head',
-    label: 'Engine Head Restoration',
+    label: 'Vintage Toy Car Radiator Shroud Restoration',
     before: '/images/before-after/head-before.png',
     after: '/images/before-after/head-after.png',
   },
