@@ -1,6 +1,39 @@
+import { useState, useRef } from 'react'
 import './Contact.css'
 
 export default function Contact() {
+  const [status, setStatus] = useState('idle')
+  const formRef = useRef(null)
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    setStatus('submitting')
+
+    const form = formRef.current
+    const data = {
+      access_key: 'b15ec1c1-ba91-4f73-b945-575340541507',
+      subject: 'New Contact Form Submission — CMF Indiana Website',
+      from_name: 'CMF Indiana Website',
+      botcheck: form.botcheck.checked,
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value,
+    }
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      })
+      const json = await res.json()
+      setStatus(json.success ? 'success' : 'error')
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <main className="contact">
 
@@ -18,14 +51,79 @@ export default function Contact() {
       <section className="contact-main">
         <div className="contact-main__inner">
 
-          {/* TEMPORARY — Contact form removed pending Web3Forms setup. Restore form here when access key is ready. */}
           <div className="contact-form-col">
-            <img
-              src="/images/about/team-2016.jpg"
-              alt="The CMF Indiana Team"
-              className="contact-team-photo"
-            />
-            <p className="contact-team-caption">The CMF Indiana Team</p>
+            <p className="contact-col__label">Send Us A Message</p>
+            <span className="contact-col__rule" />
+
+            {status === 'success' && (
+              <div style={{ fontFamily: 'var(--font-condensed)', fontSize: '16px', letterSpacing: '1px', color: '#1a1000', background: '#C8A800', padding: '20px', textAlign: 'center' }}>
+                Thanks! We will be in touch soon.
+              </div>
+            )}
+
+            {status === 'error' && (
+              <div style={{ fontFamily: 'var(--font-condensed)', fontSize: '16px', letterSpacing: '1px', color: 'white', background: '#8a0000', padding: '20px', textAlign: 'center' }}>
+                Something went wrong. Please call or email us directly.
+              </div>
+            )}
+
+            {status !== 'success' && (
+              <form ref={formRef} onSubmit={handleSubmit} noValidate>
+                <input type="checkbox" name="botcheck" style={{ display: 'none' }} />
+
+                <div className="contact-field">
+                  <label className="contact-field__label" htmlFor="contact-name">Name</label>
+                  <input
+                    className="contact-field__input"
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="contact-field">
+                  <label className="contact-field__label" htmlFor="contact-email">Email Address</label>
+                  <input
+                    className="contact-field__input"
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    required
+                  />
+                </div>
+
+                <div className="contact-field">
+                  <label className="contact-field__label" htmlFor="contact-phone">
+                    Phone Number <span className="contact-field__note" style={{ display: 'inline' }}>— Optional</span>
+                  </label>
+                  <input
+                    className="contact-field__input"
+                    id="contact-phone"
+                    name="phone"
+                    type="tel"
+                  />
+                </div>
+
+                <div className="contact-field">
+                  <label className="contact-field__label" htmlFor="contact-message">Message</label>
+                  <textarea
+                    className="contact-field__input contact-field__textarea"
+                    id="contact-message"
+                    name="message"
+                    required
+                  />
+                </div>
+
+                <button
+                  className="contact-form__btn"
+                  type="submit"
+                  disabled={status === 'submitting'}
+                >
+                  {status === 'submitting' ? 'Sending…' : 'Send Message'}
+                </button>
+              </form>
+            )}
           </div>
 
           {/* Right — Info */}
